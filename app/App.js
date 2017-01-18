@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Navigator,
+  Platform,
 } from 'react-native';
 
 import routes from './routes';
+import NavBarRouteMapper from './NavBarRouteMapper';
 import ChatNow from './components/ChatNow';
 import SignInScreen from './components/SignInScreen';
 
@@ -16,6 +18,12 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'stretch',
+    marginTop: Platform.OS === 'ios' ? 64 : 56,
+  },
+  navBar: {
+    backgroundColor: '#efefef',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: '#494949',
   },
 });
 
@@ -44,6 +52,10 @@ class App extends Component {
         renderScene={this.renderScene}
         sceneStyle={styles.sceneContainer}
         style={styles.container}
+        navigationBar={<Navigator.NavigationBar
+          routeMapper={NavBarRouteMapper}
+          style={styles.navBar}
+        />}
       />
     );
   }

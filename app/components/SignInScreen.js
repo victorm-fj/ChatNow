@@ -61,10 +61,10 @@ const SignInScreen = () => (
   <View style={styles.container}>
     <View style={styles.form}>
       <Text style={styles.label}>My Name:</Text>
-      <TextInput style={styles.input} keyboardType="numeric" />
+      <TextInput style={styles.input} keyboardType="numeric" underlineColorAndroid="rgba(0,0,0,0)" />
 
       <Text style={styles.label}>My Account Number:</Text>
-      <TextInput style={styles.input} />
+      <TextInput style={styles.input} underlineColorAndroid="rgba(0,0,0,0)" />
 
       <TouchableOpacity style={styles.actionBtn}>
         <Text style={styles.actionBtnText}>Go</Text>

@@ -6,8 +6,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import SignInScreen from './components/SignInScreen';
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

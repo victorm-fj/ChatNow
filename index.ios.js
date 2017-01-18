@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import ChatNow from './app/ChatNow';
+import App from './app/App';
 
-AppRegistry.registerComponent('ChatNow', () => ChatNow);
+AppRegistry.registerComponent('ChatNow', () => App);

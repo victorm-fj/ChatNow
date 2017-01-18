@@ -5,6 +5,7 @@ import {
   Text,
   TouchableOpacity,
   TextInput,
+  Linking,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -57,6 +58,12 @@ const styles = StyleSheet.create({
   },
 });
 
+// callback function that triggers when forgot account text is pressed
+const openHelpPage = () => {
+  // built in RN component to interact with app links
+  Linking.openURL('https://www.google.com/');
+};
+
 const SignInScreen = () => (
   <View style={styles.container}>
     <View style={styles.form}>
@@ -71,7 +78,12 @@ const SignInScreen = () => (
       </TouchableOpacity>
     </View>
 
-    <Text style={styles.externalLink}>Forgot your account number?</Text>
+    <Text
+      onPress={openHelpPage}
+      style={styles.externalLink}
+    >
+      Forgot your account number?
+    </Text>
   </View>
 );
 

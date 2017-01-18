@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   StyleSheet,
   View,
@@ -61,7 +61,12 @@ class ChatNow extends Component {
         </View>
 
         <View style={styles.btnContainer}>
-          <TouchableOpacity style={styles.btn}>
+          {/* on pressed the prop callback function will trigger navigation
+            to SignInScreen */}
+          <TouchableOpacity
+            style={styles.btn}
+            onPress={this.props.getHelpPressHandler}
+          >
             <Text style={styles.btnText}>
               Get Help
             </Text>
@@ -71,5 +76,10 @@ class ChatNow extends Component {
     );
   }
 }
+
+// Required prop pass down by ChatNow component
+ChatNow.propTypes = {
+  getHelpPressHandler: PropTypes.func.isRequired,
+};
 
 export default ChatNow;

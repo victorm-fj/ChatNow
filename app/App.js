@@ -26,7 +26,14 @@ class App extends Component {
         return <SignInScreen />;
       case 'ChatNow':
       default:
-        return <ChatNow />;
+        return (
+          // Pass down func as a prop
+          <ChatNow
+            getHelpPressHandler={() => {
+              navigator.push(routes.signIn);
+            }}
+          />
+        );
     }
   }
 

@@ -4,6 +4,7 @@ import {
   View,
   Text,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -22,6 +23,16 @@ const styles = StyleSheet.create({
     marginTop: 36,
     color: '#fff',
     fontWeight: 'bold',
+  },
+  input: {
+    height: 40,
+    width: 300,
+    color: '#4ba3c9',
+    borderWidth: 2,
+    borderColor: '#8146B3',
+    borderRadius: 6,
+    backgroundColor: '#fff',
+    paddingHorizontal: 5,
   },
   actionBtn: {
     marginTop: 36,
@@ -50,8 +61,10 @@ const SignInScreen = () => (
   <View style={styles.container}>
     <View style={styles.form}>
       <Text style={styles.label}>My Name:</Text>
+      <TextInput style={styles.input} keyboardType="numeric" />
 
       <Text style={styles.label}>My Account Number:</Text>
+      <TextInput style={styles.input} />
 
       <TouchableOpacity style={styles.actionBtn}>
         <Text style={styles.actionBtnText}>Go</Text>

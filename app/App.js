@@ -4,6 +4,7 @@ import {
   Navigator,
 } from 'react-native';
 
+import routes from './routes';
 import ChatNow from './components/ChatNow';
 import SignInScreen from './components/SignInScreen';
 
@@ -32,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <Navigator
-        initialRoute={{ name: 'ChatNow', title: 'ChatNow' }}
+        initialRoute={routes.main}
         renderScene={this.renderScene}
         sceneStyle={styles.sceneContainer}
         style={styles.container}
